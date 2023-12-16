@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "7e4b8439-b4d4-4735-be34-0c6646dcebae",
+		"name": "Zach_Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31592816"
+	},
+	"item": [
+		{
+			"name": "Submit User And Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Zach\",\r\n    \"id\": 34682,\r\n    \"age\": 23,\r\n    \"address\": \"Boston, MA\",\r\n    \"books\": [\r\n        {\"title\": \"Charles Dickens Biography\",\r\n        \"author\": \"Jensen Smith\",\r\n        \"id\" : 123,\r\n        \"available\" : true\r\n        },\r\n        {\r\n        \"title\": \"Green House\",\r\n        \"author\": \"Silver Jasper\",\r\n        \"id\" : 456,\r\n        \"available\" : false\r\n        }\r\n    ] \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve User and Book Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/book/find/Zach",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"book",
+						"find",
+						"Zach"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Title of Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/user/book/search/Green House",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"book",
+						"search",
+						"Green House"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
